@@ -1,0 +1,1 @@
+Requirement already satisfied: adam-atan2 in /gpfs/automountdir/gpfs/homes/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages (0.0.3)

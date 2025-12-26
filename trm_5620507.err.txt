@@ -1,0 +1,54 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda/12.6"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda/12.6"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"python/3.10"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "python/3.10"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+W1226 14:07:44.228000 3836537 /gpfs/automountdir/gpfs/homes/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/run.py:853] 
+W1226 14:07:44.228000 3836537 /gpfs/automountdir/gpfs/homes/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/run.py:853] *****************************************
+W1226 14:07:44.228000 3836537 /gpfs/automountdir/gpfs/homes/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/run.py:853] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1226 14:07:44.228000 3836537 /gpfs/automountdir/gpfs/homes/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/run.py:853] *****************************************
+Traceback (most recent call last):
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/run.py", line 992, in main
+    run(args)
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/run.py", line 983, in run
+    elastic_launch(
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 284, in launch_agent
+    rdzv_handler=rdzv_registry.get_rendezvous_handler(rdzv_parameters),
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/registry.py", line 96, in get_rendezvous_handler
+    return handler_registry.create_handler(params)
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/api.py", line 377, in create_handler
+    handler = creator(params)
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/registry.py", line 46, in _create_c10d_handler
+    backend, store = create_backend(params)
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 254, in create_backend
+    store = _create_tcp_store(params)
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 135, in _create_tcp_store
+    host, port = parse_rendezvous_endpoint(params.endpoint, default_port=DEFAULT_PORT)
+  File "/SEAS/home/g28630518/anaconda3/envs/trm/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/utils.py", line 101, in parse_rendezvous_endpoint
+    raise ValueError(
+ValueError: The port number of the rendezvous endpoint ':' must be an integer between 0 and 65536.
